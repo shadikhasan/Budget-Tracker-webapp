@@ -1,26 +1,23 @@
-# Use slim version of Python for a smaller image
+# Use the official Python image as the base image
 FROM python:3.10-slim
 
-# Set environment variables to prevent .pyc files and enable unbuffered logs
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
-# Set working directory
-WORKDIR /app
+# Set work directory
+WORKDIR /backend
 
 # Install dependencies
-COPY requirements.txt /app/
-RUN pip install --no-cache-dir --upgrade pip && pip install -r requirements.txt
+COPY requirements.txt ./
+RUN pip install --no-cache-dir --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
-# Copy project files
-COPY . /app/
 
-# Ensure persistent storage for SQLite
-RUN mkdir -p /persistent-data
-ENV SQLITE_PATH=/persistent-data/db.sqlite3
+# Copy project files to the working directory
+COPY . .
 
-# Expose port 8000 for Django
+# Expose port 8000 to the outside world
 EXPOSE 8000
 
-# Run migrations and start the app
-CMD ["sh", "-c", "python manage.py migrate && gunicorn --bind 0.0.0.0:8000 budget_tracker.wsgi:application"]
+# Command to run the Django development server
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
