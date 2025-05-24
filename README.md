@@ -5,6 +5,12 @@ A simple and intuitive web application built with Django to help users track the
 
 ---
 
+## Screenshots
+
+![Screenshot_1](https://github.com/user-attachments/assets/84b0e4ed-77cf-4c89-8100-2f5c05e02f2e)
+  
+
+
 ## Features
 
 - Add, edit, and delete income and expense entries.
@@ -69,11 +75,6 @@ A simple and intuitive web application built with Django to help users track the
 - Edit or delete entries as needed to keep your budget up to date.
 
 ---
-
-## Screenshots
-
-![Screenshot_1](https://github.com/user-attachments/assets/84b0e4ed-77cf-4c89-8100-2f5c05e02f2e)
-  
 
 
 ---
