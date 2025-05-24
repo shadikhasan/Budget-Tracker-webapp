@@ -72,9 +72,9 @@ A simple and intuitive web application built with Django to help users track the
 
 ## Screenshots
 
-_Add screenshots here to showcase the app interface._  
-Example:  
-![Dashboard](path/to/screenshot.png)
+![Screenshot_1](https://github.com/user-attachments/assets/84b0e4ed-77cf-4c89-8100-2f5c05e02f2e)
+  
+
 
 ---
 
