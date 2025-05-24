@@ -94,7 +94,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Shadik Hasan  
 GitHub: [https://github.com/shadikhasan](https://github.com/shadikhasan)  
-Email: [your-email@example.com]
 
 ---
 
